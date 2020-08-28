@@ -1,0 +1,592 @@
+@import 'fonts';
+@import 'vars';
+@import 'global';
+
+// start header
+.header{
+  &__logo{
+    img{
+      width: 150px;
+      height: 120px;
+    }
+  }
+  &__phone{
+    position: relative;
+    a{
+      color: #000;
+      font-size: 19px;
+      line-height: 26px;
+    }
+    span{
+      display: block;
+      font-size: 11px;
+      line-height: 19px;
+      color: #cf1a17;
+      font-weight: 700;
+    }
+    &::before{
+      content: '';
+      background-image: url(../images/icons/phone.png);
+      position: absolute;
+      width: 33px;
+      height: 33px;
+      border-radius: 50%;
+      top: 5px;
+      left: -50px;
+    }
+  }
+}
+.header__top-inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0 25px;
+}
+.menu__list{
+  li{
+    display: inline-block;
+    & + li{
+      margin-left: 35px;
+    }
+  }
+  a{
+    font-size: 14px;
+    line-height: 22px;
+    color: #2c3e50;
+    border-bottom: 2px solid #d7dbde;
+  }
+}
+// end header
+
+// start presentation
+.presentation{
+  min-height: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  &::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 3px;
+    left: 0;
+    top: 0;
+    background-image: url(../images/icons/lineup-bg.jpg);
+    background-repeat: repeat;
+  }
+  &::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    background-image: url(../images/icons/line-bg.jpg);
+    background-repeat: repeat;
+  }
+}
+.presentation__info{
+  color: #fff;
+  text-align: center;
+  padding: 55px 0 55px;
+  &-title{
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 26px;
+    span{
+      font-size: 39px;
+      line-height: 48px;
+      font-weight: 900;
+      display: block;
+      padding-bottom: 10px;
+    }
+  }
+  &-descr{
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 32px;
+    margin-bottom: 55px;
+    span{
+      font-size: 23px;
+      line-height: 32px;
+      font-weight: 900;
+    }
+  }
+}
+// end presentation
+
+// start all-inclusive
+.all-inclusive{
+  padding: 60px 0 70px;
+  text-align: center;
+  &__title{
+    margin-bottom: 50px;
+  }
+}
+.inclusive__items{
+  display: flex;
+  justify-content: space-between;
+}
+.inclusive__item{
+  width: 170px;
+  &-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 82px;
+  }
+  &-title{ 
+    font-weight: 900px;
+    font-size: 19px;
+    line-height: 24px;
+  }
+  &-text{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #858585;
+  }
+}
+// end all-inclusive
+
+// start excursions
+.excursions{
+  min-height: 965px;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  &__title{
+    padding: 50px 0;
+  }
+}
+.excursions__inner-box{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-left: -30px;
+}
+.excursion__item{
+  // max-width: 287px;
+  width: 100%;
+  margin-bottom: 45px;
+  flex-basis: calc(33.33333% - 30px);
+  margin-left: 27px;
+  &-img{
+    min-height: 180px;
+    margin-bottom: 25px;
+    cursor: pointer;
+    img{
+      border-radius: 13px;
+      max-width: 287px;
+      height: 201px;
+      box-shadow: 0px 3px 32px 0px rgba(255, 0, 0, 0.35);
+    }
+  }
+  &-title{
+    text-align: center;
+    font-size: 19px;
+    line-height: 24px;
+    font-weight: 900;
+    color: #2c3e50;
+    border-bottom: 1px solid #2c3e50;
+    cursor: pointer;
+  }
+}
+// end excursions
+
+// start description
+.description{
+  padding: 50px 0 60px;
+  text-align: center;
+  &__title{
+    margin-bottom: 50px;
+  }
+}
+.description__box{
+  &-title{
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  &-text{
+    font-weight: 400;
+  }
+  &-descr{
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #555555;
+    letter-spacing: 1.5px;
+    margin-bottom: 45px;
+  }
+}
+.box__text{
+  &-tourists{
+    padding: 0 25px;
+    margin-bottom: 45px;
+  }
+  &-guides{
+    padding: 30px 40px;
+    box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.18);
+    border-radius: 13px;
+    margin-bottom: 45px;
+    span{
+      color: #ff0000;
+      font-weight: 900;
+    }
+  }
+}
+.description__documents{
+  display: flex;
+  justify-content: space-between;
+  max-width: 495px;
+  margin: 0 auto;
+}
+.document__item{
+  width: 125px;
+  &-link{
+    font-size: 13px;
+    line-height: 21px;
+    text-transform: uppercase;
+    a{
+      color: #ff0000;
+      border-bottom: 1px solid #ff3f3f;
+    }
+  }
+}
+// end description
+
+// start reviews
+.reviews{
+  min-height: 390px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0 60px;
+  &__title{
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
+.reviews__item{
+  max-width: 580px;
+  margin: 0 auto;
+  padding:  37px 45px;
+  background: #fff;
+  border-radius: 13px;
+  box-shadow: 0px 3px 32px 0px rgba(255, 0, 0, 0.11);
+  &-box{
+    display: flex;
+    justify-content: space-between;
+  }
+  &-img{
+    img{
+      border-radius: 50%;
+    }
+  }
+}
+.reviews__box{
+  padding-left: 25px;
+  &-title{
+    font-size: 19px;
+    line-height: 27px;
+    font-weight: 900;
+    margin-bottom: 10px;
+  }
+  &-text{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #686868;
+  }
+}
+.swiper-button-prev:after, 
+.swiper-button-next:after{
+ display: none;
+}
+.swiper-button-next{
+  right: 230px;
+}
+.swiper-button-prev{
+  left: 215px;
+}
+.swiper-buttons{
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+.swiper-button-prev,
+.swiper-button-next{
+  position: absolute;
+  top: 90px;
+  width: 60px;
+  height: 70px;
+  outline: transparent;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+.swiper-slide{
+  opacity: 0.5;
+  width: auto;
+}
+.swiper-slide-active{
+  opacity: 1;
+}
+// end reviews
+
+// strat connection
+.connection{
+  text-align: center;
+  padding: 67px 0 40px;
+  overflow-x: hidden;
+  &__title{
+    margin-bottom: 55px;
+  }
+  &__text{
+    font-size: 15px;
+    line-height: 22px;
+    color: #757575;
+    font-weight: 400;
+    margin-top: 40px;
+    display: inline-block;
+  }
+}
+.connection__inner{
+  display: flex;
+  justify-content: space-between;
+}
+.connection__box{
+  width: 260px;
+  &-title{
+    font-size: 19px;
+    line-height: 26px;
+    margin: 5px 0 45px;
+    min-height: 70px;
+  }
+  &-btn{
+    padding: 22px 36px;
+    box-shadow: 0px 8px 32px 0px rgba(252, 5, 2, 0.39);
+    &::before{
+      content: 'Заказать звонок';
+      background-image: url(../images/content/bg-btn.png);
+      position: absolute;
+      width: 228px;
+      height: 57px;
+      padding-top: 15px;
+      right: -1px;
+      z-index: 5;
+      bottom: 7px;
+    }
+  }
+}
+.connection__text::after,
+.connection__text::before{
+  content: '';
+  position: absolute;
+  background-image: url(../images/icons/line.jpg);
+  height: 6px;
+  width: 500%;
+  top: -55px;
+}
+.connection__text{
+  position: relative;
+  &::before{
+    left: 100%;
+  }
+  &::after{
+   right: 100%;
+  }
+}
+// end connection
+
+// start footer
+.footer{
+  min-height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 30px 0;
+}
+.footer__inner{
+  display: flex;
+  justify-content: space-between;
+}
+.footer__info{  
+  max-width: 270px;
+  &-title{
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 5px;
+  }
+  &-text{
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 400;
+    margin-bottom: 15px;
+  }
+  &-copy{
+    color: #757575;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+}
+.footer__phone{
+  display: inline-block;
+  &::before{
+    top: -5px;
+    
+  }
+}
+.footer__contacts{
+  max-width: 460px;
+  text-align: right;
+  &-adress{
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 500;
+  }
+  &-work{
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 500;
+  }
+  &-email{
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #f80a09;
+    border-bottom: 1px solid #ff0000;
+  }
+}
+// end footer
+
+// start popup
+.fancybox-content {
+  max-width: 980px;
+  min-height: 520px;
+  width: 100%;
+  padding: 0;
+  border-radius: 14px;
+}
+.fancybox-is-open .fancybox-bg{
+  opacity: 0.6;
+}
+.fancybox-bg{
+  background: #585858;
+}
+.fancybox-slide--html .fancybox-close-small {
+  width: 87px;
+  height: 87px;
+  background-color: #fff;
+  opacity: 1;
+  padding: 30px;
+  border-top-right-radius: 14px;
+}
+.popup__inner{
+  &-img{
+    img{
+      width: 100%;
+      height: 205px;
+    }
+  }
+}
+.popup__content{
+  padding: 25px 30px 40px 35px;
+  font-weight: 400;
+  &-title{
+    font-size: 24px;
+    line-height: 32px;
+    @include f800;
+    margin-bottom: 30px;
+  }
+  &-text{
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 400;
+    @include f400;
+  }
+}
+.fancybox-button{
+  svg{
+    background-image: url(../images/icons/close.png);
+    width: 30px;
+    height: 26px;
+  }
+  path{
+    display: none;
+  }
+} 
+.fancybox-connection{
+  max-width: 660px;
+  min-height: 300px;
+  width: 100%;
+  padding: 0;
+  border-radius: 14px;
+}
+.connection__content{
+  padding: 40px;
+  text-align: center;
+  &-title{
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 10px;
+  }
+  &-text{
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    margin-bottom: 15px;
+  }
+  &-name input{
+    padding: 0 15px;
+    border: none;
+    @include f400;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #858585;
+    &::placeholder{
+      @include f400;
+    }
+  }
+  &-phone input{
+    padding: 0 15px;
+    border: none;
+    @include f400;
+    margin-bottom: 35px;
+    border-bottom: 1px solid #858585;
+  }
+  &-button{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 22px;
+    width: 228px;
+    height: 57px;
+    padding: 22px 42px;
+    background: #b30000;
+    border-radius: 13px;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,.004);
+    position: relative;
+    z-index: 3;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    &::before{
+      content: 'отправить';
+      background-image: url(../images/content/bg-btn.png);
+      position: absolute;
+      width: 228px;
+      height: 57px;
+      padding-top: 17px;
+      z-index: 5;
+      bottom: 9px;
+      left: 0;
+    }
+  }
+}
+.compensate-for-scrollbar{
+  margin-right: 0 !important;
+}
+// end popup
+@import 'media';
