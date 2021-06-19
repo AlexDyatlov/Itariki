@@ -61,11 +61,14 @@
   }
    // start burger menu
    .menu__btn {
-    width: 40px;
-    height: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    border: none;
+    padding: 0;
     transition: transform 330ms ease-out;
   }
   .menu__btn.open {
